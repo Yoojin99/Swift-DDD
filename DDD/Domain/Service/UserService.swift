@@ -8,7 +8,7 @@
 import Foundation
 
 class UserService {
-    func isNameDuplicate() -> Bool {
+    func isNameDuplicate(userModel: UserModel) -> Bool {
         // check whether name is duplicate
         return false
     }
