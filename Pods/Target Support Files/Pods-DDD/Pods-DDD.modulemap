@@ -1,6 +1,0 @@
-framework module Pods_DDD {
-  umbrella header "Pods-DDD-umbrella.h"
-
-  export *
-  module * { export * }
-}
