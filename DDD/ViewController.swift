@@ -15,12 +15,12 @@ class ViewController: UIViewController {
         
         setUpView()
         
-        var user1: User
-        var user2: User
+        var user1: UserModel
+        var user2: UserModel
         
         do {
-            user1 = try User(id: "id1", name: "hii")
-            user2 = try User(id: "id1", name: "Hii")
+            user1 = try UserModel(id: "id1", name: "hii")
+            user2 = try UserModel(id: "id1", name: "Hii")
             
             print(user1.equals(user: user2))
             print(user1 == user2)

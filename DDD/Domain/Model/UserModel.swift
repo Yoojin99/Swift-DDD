@@ -23,7 +23,7 @@ struct UserId : Equatable {
     }
 }
 
-class User: Equatable {
+class UserModel: Equatable {
     private let userId: UserId
     private(set) var name: String
     private let checkNameIsValid: (String) throws -> Void = { name in
@@ -44,14 +44,14 @@ class User: Equatable {
         self.name = name
     }
     
-    func equals(user: User) -> Bool {
+    func equals(user: UserModel) -> Bool {
         if self === user || self.userId == user.userId {
             return true
         }
         return false
     }
     
-    static func == (lhs: User, rhs: User) -> Bool {
+    static func == (lhs: UserModel, rhs: UserModel) -> Bool {
         lhs.equals(user: rhs)
     }
 }
