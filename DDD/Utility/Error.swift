@@ -7,6 +7,7 @@
 
 import Foundation
 
-enum ArgumentExceptionError: Error {
+enum ExceptionError: Error {
     case ArgumentExceptionError(String)
+    case ExceptionError(String)
 }
