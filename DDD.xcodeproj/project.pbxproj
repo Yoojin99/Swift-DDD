@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -65,6 +65,8 @@
 		F102E407268B157D002164E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F102E40D268B16AD002164E8 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		F102E417268C3FAC002164E8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F102E42A268C48FD002164E8 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F102E42B268C48FD002164E8 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,6 @@
 				E6C54329DC8D9E334699E565 /* Pods-DDDTests.debug.xcconfig */,
 				03DE416F492B64393BF958FA /* Pods-DDDTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -200,6 +201,8 @@
 		F2A8F916C9205F9C763685B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F102E42A268C48FD002164E8 /* Realm.framework */,
+				F102E42B268C48FD002164E8 /* RealmSwift.framework */,
 				BA92152AFC6D248F14FB9E13 /* Pods_DDD.framework */,
 				DBC8E0ADAFEE35C2AD09C5EB /* Pods_DDD_DDDUITests.framework */,
 				267C4C6326264168501AD0BD /* Pods_DDDTests.framework */,
@@ -218,6 +221,7 @@
 				F102E3C9268AF157002164E8 /* Sources */,
 				F102E3CA268AF157002164E8 /* Frameworks */,
 				F102E3CB268AF157002164E8 /* Resources */,
+				A69BB4DF74BAFE3047DB93A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +259,7 @@
 				F102E3EA268AF159002164E8 /* Sources */,
 				F102E3EB268AF159002164E8 /* Frameworks */,
 				F102E3EC268AF159002164E8 /* Resources */,
+				B544D5C85B77CABCC2311B91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +382,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69BB4DF74BAFE3047DB93A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDD/Pods-DDD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDD/Pods-DDD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDD/Pods-DDD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B544D5C85B77CABCC2311B91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDD-DDDUITests/Pods-DDD-DDDUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DDD-DDDUITests/Pods-DDD-DDDUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DDD-DDDUITests/Pods-DDD-DDDUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7054C7BB50CC6A50D57B012 /* [CP] Check Pods Manifest.lock */ = {

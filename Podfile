@@ -6,6 +6,7 @@ target 'DDD' do
   use_frameworks!
 
   # Pods for DDD
+  pod 'RealmSwift'
 
   target 'DDDTests' do
     inherit! :search_paths
