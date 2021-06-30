@@ -24,11 +24,11 @@ struct UserId : Equatable {
 }
 
 class UserModel: Equatable {
-    private let userId: UserId
+    let userId: UserId
     private(set) var name: String
     private let checkNameIsValid: (String) throws -> Void = { name in
         if name.count < 3 {
-            throw ArgumentExceptionError.ArgumentExceptionError("이름이 3자 미만")
+            throw ExceptionError.ArgumentExceptionError("이름이 3자 미만")
         }
     }
     
