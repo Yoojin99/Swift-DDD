@@ -14,8 +14,10 @@
 		F102E3DD268AF159002164E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F102E3DB268AF159002164E8 /* LaunchScreen.storyboard */; };
 		F102E3E8268AF159002164E8 /* DDDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E3E7268AF159002164E8 /* DDDTests.swift */; };
 		F102E3F3268AF159002164E8 /* DDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E3F2268AF159002164E8 /* DDDUITests.swift */; };
-		F102E408268B157D002164E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E407268B157D002164E8 /* User.swift */; };
+		F102E408268B157D002164E8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E407268B157D002164E8 /* UserModel.swift */; };
 		F102E40E268B16AD002164E8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E40D268B16AD002164E8 /* Error.swift */; };
+		F102E418268C3FAC002164E8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E417268C3FAC002164E8 /* UserService.swift */; };
+		F102E45E268C4D2E002164E8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F102E45C268C4D2E002164E8 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		F102E3EE268AF159002164E8 /* DDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F102E3F2268AF159002164E8 /* DDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDUITests.swift; sourceTree = "<group>"; };
 		F102E3F4268AF159002164E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F102E407268B157D002164E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F102E407268B157D002164E8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F102E40D268B16AD002164E8 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		F102E417268C3FAC002164E8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F102E45D268C4D2E002164E8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,8 @@
 		F102E406268B156B002164E8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F102E407268B157D002164E8 /* User.swift */,
+				F102E416268C3F99002164E8 /* Service */,
+				F102E415268C3F85002164E8 /* Model */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -145,6 +150,23 @@
 				F102E40D268B16AD002164E8 /* Error.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F102E415268C3F85002164E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F102E407268B157D002164E8 /* UserModel.swift */,
+				F102E45C268C4D2E002164E8 /* Model.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F102E416268C3F99002164E8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F102E417268C3FAC002164E8 /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F102E408268B157D002164E8 /* User.swift in Sources */,
+				F102E408268B157D002164E8 /* UserModel.swift in Sources */,
 				F102E3D5268AF157002164E8 /* ViewController.swift in Sources */,
+				F102E418268C3FAC002164E8 /* UserService.swift in Sources */,
+				F102E45E268C4D2E002164E8 /* Model.xcdatamodeld in Sources */,
 				F102E3D1268AF157002164E8 /* AppDelegate.swift in Sources */,
 				F102E40E268B16AD002164E8 /* Error.swift in Sources */,
 				F102E3D3268AF157002164E8 /* SceneDelegate.swift in Sources */,
@@ -599,6 +623,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F102E45C268C4D2E002164E8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F102E45D268C4D2E002164E8 /* Model.xcdatamodel */,
+			);
+			currentVersion = F102E45D268C4D2E002164E8 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F102E3C5268AF157002164E8 /* Project object */;
 }
