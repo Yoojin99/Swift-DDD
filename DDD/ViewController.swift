@@ -12,18 +12,6 @@ class ViewController: UIViewController {
     private var userIdTextField: UITextField!
     private var userNameTextField: UITextField!
     private var createUserBtn: UIButton!
-    
-    // MARK: coreData
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Model")
-        
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,55 +104,18 @@ class ViewController: UIViewController {
             print("duplicate")
             return
         }
-        
-        do {
-            try createUser(id: id, name: name)
-        } catch(ExceptionError.ArgumentExceptionError) {
-            print("ArgumentExceptionError")
-        } catch(ExceptionError.ExceptionError) {
-            print("ExceptionError")
-        } catch {
-            print("Error")
-        }
+        createUser(id: id, name: name)
     }
 
-    
-    // MARK: coreData saving support
-    func saveContext() {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
-    
     // MARK: data handling
-    private func createUser(id: String, name: String) throws {
-        let userModel: UserModel = try UserModel(id: id, name: name)
-        
-        let context = persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
-        
-        if let entity = entity {
-            let user = NSManagedObject(entity: entity, insertInto: context)
-            user.setValue(userModel.userId.value, forKey: "id")
-            user.setValue(userModel.name, forKey: "name")
+    private func createUser(id: String, name: String) {
+        do {
+            let userModel: UserModel = try UserModel(id: id, name: name)
+            UserRepository.save(model: userModel)
+        } catch {
+            print(error)
         }
-        
-        try context.save()
     }
     
-    func fetchData<T: NSManagedObject>(request: NSFetchRequest<T>) -> [T] {
-        do {
-            let fetchResult = try persistentContainer.viewContext.fetch(request)
-            return fetchResult
-        } catch {
-            print(error.localizedDescription)
-            return []
-        }
-    }
+    
 }
