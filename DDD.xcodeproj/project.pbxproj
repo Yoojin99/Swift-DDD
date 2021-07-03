@@ -21,6 +21,7 @@
 		F102E49D268D9C0B002164E8 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E49C268D9C0B002164E8 /* DefaultUserRepository.swift */; };
 		F102E4A2268DABF2002164E8 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E4A1268DABF2002164E8 /* PersistencyManager.swift */; };
 		F102E4AC268DBD5B002164E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E4AB268DBD5B002164E8 /* UserRepository.swift */; };
+		F102E5242690435C002164E8 /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E5232690435C002164E8 /* UserRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F102E49C268D9C0B002164E8 /* DefaultUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserRepository.swift; sourceTree = "<group>"; };
 		F102E4A1268DABF2002164E8 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		F102E4AB268DBD5B002164E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		F102E5232690435C002164E8 /* UserRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		F102E3E6268AF159002164E8 /* DDDTests */ = {
 			isa = PBXGroup;
 			children = (
+				F102E52226904325002164E8 /* Data */,
 				F102E3E7268AF159002164E8 /* DDDTests.swift */,
 				F102E3E9268AF159002164E8 /* Info.plist */,
 			);
@@ -200,6 +203,14 @@
 				F102E4AB268DBD5B002164E8 /* UserRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		F102E52226904325002164E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F102E5232690435C002164E8 /* UserRepositoryTests.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F102E5242690435C002164E8 /* UserRepositoryTests.swift in Sources */,
 				F102E3E8268AF159002164E8 /* DDDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
