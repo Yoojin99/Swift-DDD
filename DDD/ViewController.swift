@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController {
+    private let userService: UserService = UserService(userRepository: DefaultUserRepository(viewContext: PersistencyManager.shared().persistentContainer.viewContext))
+    
     private var userIdTextField: UITextField!
     private var userNameTextField: UITextField!
     private var createUserBtn: UIButton!
@@ -100,7 +102,7 @@ class ViewController: UIViewController {
             return
         }
         
-        if UserService.isNameDuplicate(userName: name) {
+        if userService.isNameDuplicate(userName: name) {
             print("duplicate")
             return
         }
@@ -111,7 +113,7 @@ class ViewController: UIViewController {
     private func createUser(id: String, name: String) {
         do {
             let userModel: UserModel = try UserModel(id: id, name: name)
-            UserRepository.save(model: userModel)
+            userService.saveUser(user: userModel)
         } catch {
             print(error)
         }
