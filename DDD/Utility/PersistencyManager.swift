@@ -9,7 +9,13 @@ import Foundation
 import CoreData
 
 class PersistencyManager {
-    static var persistentContainer: NSPersistentContainer = {
+    private static var sharedManager: PersistencyManager = PersistencyManager()
+    
+    public class func shared() -> PersistencyManager {
+        return sharedManager
+    }
+    
+    var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Model")
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -20,7 +26,7 @@ class PersistencyManager {
         return container
     }()
     
-    static func saveContext() {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
