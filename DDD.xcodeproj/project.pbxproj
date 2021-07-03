@@ -18,8 +18,9 @@
 		F102E40E268B16AD002164E8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E40D268B16AD002164E8 /* Error.swift */; };
 		F102E418268C3FAC002164E8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E417268C3FAC002164E8 /* UserService.swift */; };
 		F102E45E268C4D2E002164E8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F102E45C268C4D2E002164E8 /* Model.xcdatamodeld */; };
-		F102E49D268D9C0B002164E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E49C268D9C0B002164E8 /* UserRepository.swift */; };
+		F102E49D268D9C0B002164E8 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E49C268D9C0B002164E8 /* DefaultUserRepository.swift */; };
 		F102E4A2268DABF2002164E8 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E4A1268DABF2002164E8 /* PersistencyManager.swift */; };
+		F102E4AC268DBD5B002164E8 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102E4AB268DBD5B002164E8 /* UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,9 @@
 		F102E40D268B16AD002164E8 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		F102E417268C3FAC002164E8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F102E45D268C4D2E002164E8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		F102E49C268D9C0B002164E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		F102E49C268D9C0B002164E8 /* DefaultUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserRepository.swift; sourceTree = "<group>"; };
 		F102E4A1268DABF2002164E8 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		F102E4AB268DBD5B002164E8 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		F102E406268B156B002164E8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F102E4A9268DBD41002164E8 /* Interface */,
 				F102E416268C3F99002164E8 /* Service */,
 				F102E415268C3F85002164E8 /* Model */,
 			);
@@ -178,9 +181,25 @@
 		F102E49B268D9BF7002164E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F102E49C268D9C0B002164E8 /* UserRepository.swift */,
+				F102E49C268D9C0B002164E8 /* DefaultUserRepository.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		F102E4A9268DBD41002164E8 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				F102E4AA268DBD4C002164E8 /* Repository */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		F102E4AA268DBD4C002164E8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F102E4AB268DBD5B002164E8 /* UserRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +338,8 @@
 				F102E4A2268DABF2002164E8 /* PersistencyManager.swift in Sources */,
 				F102E3D1268AF157002164E8 /* AppDelegate.swift in Sources */,
 				F102E40E268B16AD002164E8 /* Error.swift in Sources */,
-				F102E49D268D9C0B002164E8 /* UserRepository.swift in Sources */,
+				F102E49D268D9C0B002164E8 /* DefaultUserRepository.swift in Sources */,
+				F102E4AC268DBD5B002164E8 /* UserRepository.swift in Sources */,
 				F102E3D3268AF157002164E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
