@@ -10,11 +10,22 @@ import CoreData
 import UIKit
 
 class UserService {
-    static func isNameDuplicate(userName: String) -> Bool {
+    
+    private let userRepository: UserRepository
+    
+    init(userRepository: UserRepository) {
+        self.userRepository = userRepository
+    }
+    
+    func isNameDuplicate(userName: String) -> Bool {
         // check whether name is duplicate
-        if UserRepository.findUserByName(name: userName) != nil {
+        if userRepository.findUserByName(name: userName) != nil {
             return true
         }
         return false
+    }
+    
+    func saveUser(user: UserModel) {
+        userRepository.save(user: user)
     }
 }
